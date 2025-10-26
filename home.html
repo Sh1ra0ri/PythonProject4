@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar a {
+            color: #fff;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #343a40;
+            text-decoration: none;
+        }
+        .active {
+            background-color: #007bff;
+        }
+        .main {
+            margin-left: 450px;
+            padding: 20px;
+        }
+        .card {
+            text-align: center;
+            margin: 10px;
+        }
+        .profile-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .profile-panel:hover {
+            background-color: #f8f9fa;
+        }
+        .profile-menu {
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem; /* Используем Bootstrap-радиус */
+            padding: 0.5rem; /* Используем Bootstrap-отступ */
+            display: none;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Bootstrap-тень */
+        }
+        .profile-panel:hover + .profile-menu {
+            display: block;
+        }
+        .profile-menu a {
+            display: block;
+            padding: 0.25rem 1rem; /* Bootstrap-отступы */
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem; /* Легкая корректировка размера текста */
+        }
+        .profile-menu a:hover {
+            background-color: #e9ecef; /* Bootstrap-цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+
+    <ul class="list-unstyled">
+        <li><a class="active" href="#">Главная</a></li>
+        <li><a href="catalog.html">Категории</a></li>
+        <li><a href="orders.html">Заказы</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</div>
+
+<div class="main">
+    <h1>Главная</h1>
+    <p>Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 1</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users, 2 GB storage</p>
+                    <a href="#" class="btn btn-primary">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 1</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users, 2 GB storage</p>
+                    <a href="#" class="btn btn-primary">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 1</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users, 2 GB storage</p>
+                    <a href="#" class="btn btn-primary">Купить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="profile-panel">
+    <span>👤</span>
+</div>
+<div class="profile-menu">
+    <a href="#" class="dropdown-item">Профиль</a>
+    <a href="#" class="dropdown-item">Выход</a>
+</div>
+</body>
+</html>
