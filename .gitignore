@@ -1,0 +1,19 @@
+# PyCharm
+.idea/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Databases
+*.sqlite
+*.db
+
+# Logs
+*.log
