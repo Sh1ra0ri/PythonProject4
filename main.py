@@ -1,20 +1,18 @@
-from flask import Flask, Response, send_from_directory
+import http.server
+import requests
 
-app = Flask(__name__)
+PORT = 8000
+HTML_URL = "https://raw.githubusercontent.com/Sh1ra0ri/PythonProject4/main/contacts.html"
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def index(path):
-    try:
-        with open("contacts.html", "r", encoding="utf-8") as file:
-            content = file.read()
-        return Response(content, mimetype='text/html')
-    except FileNotFoundError:
-        return "Page not found", 404
+# Загружаем HTML
+HTML = requests.get(HTML_URL).text
 
-@app.route('/css/<path:filename>')
-def css_files(filename):
-    return send_from_directory("css", filename)
+class Handler(http.server.BaseHTTPRequestHandler):
+    def do_GET(self):  # ← ОБЯЗАТЕЛЬНО do_GET (с большой G и E)
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.end_headers()
+        self.wfile.write(HTML.encode("utf-8"))
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+# noinspection PyTypeChecker
+http.server.ThreadingHTTPServer(("", PORT), Handler).serve_forever()
