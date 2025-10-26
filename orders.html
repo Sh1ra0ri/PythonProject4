@@ -1,0 +1,181 @@
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            width: 200px;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar a {
+            color: #fff;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #343a40;
+            text-decoration: none;
+        }
+        .active {
+            background-color: #007bff;
+        }
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .card {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .btn-custom {
+            background-color: #fff;
+            border-color: #007bff;
+            color: #007bff;
+        }
+        .btn-custom:hover {
+            background-color: #f8f9fa;
+            border-color: #0056b3;
+            color: #0056b3;
+        }
+                .profile-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .profile-panel:hover {
+            background-color: #f8f9fa;
+        }
+        .profile-menu {
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem; /* Используем Bootstrap-радиус */
+            padding: 0.5rem; /* Используем Bootstrap-отступ */
+            display: none;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Bootstrap-тень */
+        }
+        .profile-panel:hover + .profile-menu {
+            display: block;
+        }
+        .profile-menu a {
+            display: block;
+            padding: 0.25rem 1rem; /* Bootstrap-отступы */
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem; /* Легкая корректировка размера текста */
+        }
+        .profile-menu a:hover {
+            background-color: #e9ecef; /* Bootstrap-цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <ul class="list-unstyled">
+        <li><a href="home.html">Главная</a></li>
+        <li><a href="catalog.html">Категории</a></li>
+        <li><a class="active" href="orders.html">Заказы</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <h1>Заказы</h1>
+    <p>Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 1</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users included, 2 GB of storage</p>
+                    <p class="card-text">Email support, Help center access</p>
+                    <a href="#" class="btn btn-custom">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 2</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users included, 2 GB of storage</p>
+                    <p class="card-text">Email support, Help center access</p>
+                    <a href="#" class="btn btn-custom">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 3</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users included, 2 GB of storage</p>
+                    <p class="card-text">Email support, Help center access</p>
+                    <a href="#" class="btn btn-custom">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 4</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users included, 2 GB of storage</p>
+                    <p class="card-text">Email support, Help center access</p>
+                    <a href="#" class="btn btn-custom">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 5</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users included, 2 GB of storage</p>
+                    <p class="card-text">Email support, Help center access</p>
+                    <a href="#" class="btn btn-custom">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Товар 6</h5>
+                    <p class="card-text">$100</p>
+                    <p class="card-text">10 users included, 2 GB of storage</p>
+                    <p class="card-text">Email support, Help center access</p>
+                    <a href="#" class="btn btn-custom">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-panel">
+            <span>👤</span>
+        </div>
+        <div class="profile-menu">
+            <a href="#" class="dropdown-item">Профиль</a>
+            <a href="#" class="dropdown-item">Выход</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
